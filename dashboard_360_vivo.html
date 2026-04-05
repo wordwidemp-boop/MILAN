@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360-degree Live Camera Monitoring System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #00ffcc;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 90%;
+            margin: 20px 0;
+        }
+        .camera {
+            background-color: #444;
+            border: 2px solid #00ffcc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .clock {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .energy-management {
+            background-color: #444;
+            padding: 10px;
+            margin: 20px 0;
+            width: 90%;
+        }
+        .protection-logs {
+            background-color: #444;
+            padding: 10px;
+            margin: 20px 0;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <h1>360-degree Live Camera Monitoring System</h1>
+    <div class="clock" id="clock"></div>
+    <div class="grid">
+        <div class="camera"><iframe src="https://example.com/webcam1" width="100%" height="200px"></iframe></div>
+        <div class="camera"><iframe src="https://example.com/webcam2" width="100%" height="200px"></iframe></div>
+        <div class="camera"><iframe src="https://example.com/webcam3" width="100%" height="200px"></iframe></div>
+        <div class="camera"><iframe src="https://example.com/webcam4" width="100%" height="200px"></iframe></div>
+        <div class="camera"><iframe src="https://example.com/webcam5" width="100%" height="200px"></iframe></div>
+        <div class="camera"><iframe src="https://example.com/webcam6" width="100%" height="200px"></iframe></div>
+    </div>
+    <div class="energy-management">
+        <h2>Energy Management Visualization</h2>
+        <p>Real-time energy management data and graphs will go here.</p>
+    </div>
+    <div class="protection-logs">
+        <h2>Protection Logs</h2>
+        <p>Logs of protection activity will go here.</p>
+    </div>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const utcTime = now.toUTCString();
+            document.getElementById('clock').innerHTML = utcTime;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
